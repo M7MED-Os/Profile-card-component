@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+  --blue-600: hsl(185, 75%, 39%);
+  --navy-950: hsl(229, 23%, 23%);
+  --gray-500: hsl(227, 10%, 46%);
+  --gray-100: hsl(225, 10%, 92%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--blue-600);
+  overflow: hidden;
+}
+
+section:before {
+  content: url(../images/bg-pattern-top.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -50%);
+}
+
+section:after {
+  content: url(../images/bg-pattern-bottom.svg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(25%, 50%);
+}
+
+@media (max-width: 900px) {
+  section:before {
+    transform: translate(-60%, -50%);
+  }
+  section:after {
+    transform: translate(60%, 50%);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  position: relative;
+  z-index: 999;
+}
+
+.card-container .pattern-card {
+  display: flex;
+}
+
+.card-container .pattern-card img {
+  border-radius: 12px 12px 0 0;
+}
+
+.card {
+  width: 100%;
+}
+
+.card .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+}
+
+.card .photo img {
+  border-radius: 50%;
+}
+
+.card .details {
+  margin-top: 80px;
+}
+
+.card .details .data {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card .details .data .name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy-950);
+}
+
+.card .details .data .name span,
+.card .details .data .country {
+  color: var(--gray-500);
+  font-weight: normal;
+}
+
+.card .details .data .country {
+  display: block;
+  margin-top: 7px;
+}
+
+.statistics {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 30px;
+}
+
+.statistics > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistics > div span:first-child {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--navy-950);
+  margin-bottom: 5px;
+}
+
+.statistics > div span:last-child {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--gray-500);
+}
