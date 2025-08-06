@@ -50,6 +50,15 @@ section:after {
   }
 }
 
+@media (max-width: 400px) {
+  section:before {
+    transform: translate(-60%, -70%);
+  }
+  section:after {
+    transform: translate(60%, 70%);
+  }
+}
+
 .card-container {
   display: flex;
   flex-direction: column;
