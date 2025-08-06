@@ -2,6 +2,8 @@
 
 ![Design preview for the Profile card component coding challenge](preview.jpg)
 
+[🔗 View Demo](https://m7med-os.github.io/Profile-card-component/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
